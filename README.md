@@ -5,6 +5,7 @@ https://hackwise.org/
 https://hackwise2020.devpost.com/
 
 ## Installation
+Make sure you have python 3 **installed**  
 Dowload the files and unzip them, afterwards open the folder up in your favorite IDE!  
 Libraries you will **need** to install:  
 `pip3 install flask`  
