@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Health Look Up{% endblock %}
+
+{% block content %}
+<body class="container">
+<form method="POST" action="">
+    <br><br><br>
+    <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Search</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" name="query">
+    </div>
+    <br>
+    <a class="btn btn-danger" href="/map">Nearby Hospitals</a>
+    <a class="btn btn-primary" href="/exercise">Exercise!</a>
+    <br><br><br>
+</form>
+
+    <div class="container-fluid justify-content-center">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col">
+                        {% for result in results_list %}
+                        <div class="card shadow mb-3">
+                            <div class="card-header py-3">
+                                <p class="text-primary m-0 font-weight-bold">{{ result.result }}</p>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                {{ result.description }}
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="py-3">
+                                        <p class="text-primary m-0 font-weight-bold">Provided by {{ result.website }}</p>
+                                        <a class="btn btn-success" href={{ result.redirect_link }}>View More</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

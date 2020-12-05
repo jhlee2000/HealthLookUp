@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Nearest Hospital Map{% endblock %}
+
+{% block content %}
+<body class="container">
+<br><br>
+<a class="btn btn-primary" href="/">Back</a>
+<br><br>
+<h1>Exercise!</h1>
+<h2>Daily exercise will keep you fit and healthy!</h2>
+<h2>Scan the QR Code to see how to do this exercises in AR!</h2>
+<br><br>
+
+<!-- Push Up -->
+<p>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#pushUp"
+            aria-expanded="false" aria-controls="collapseExample">
+        Push-up
+    </button>
+</p>
+<div class="collapse" id="pushUp">
+    <img src="../static/img/push-up.png" alt="Push-up QR Code">
+    <a href="https://go.echoar.xyz/xLAf">Or click here!</a>
+</div>
+
+
+<!-- Jumping Jack -->
+<p>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#jumpJack"
+            aria-expanded="false" aria-controls="collapseExample">
+        Jumping Jack
+    </button>
+</p>
+<div class="collapse" id="jumpJack">
+    <img src="../static/img/jump-jack.png" alt="Push-up QR Code">
+    <a href="https://go.echoar.xyz/RZhJ">Or click here!</a>
+</div>
+</body>
+
+
+<!-- Running -->
+<p>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#running"
+            aria-expanded="false" aria-controls="collapseExample">
+        Running
+    </button>
+</p>
+<div class="collapse" id="running">
+    <img src="../static/img/running.png" alt="Push-up QR Code">
+    <a href="https://go.echoar.xyz/FwTY">Or click here!</a>
+</div>
+
+
+<!-- Sit Up -->
+<p>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#sitUp"
+            aria-expanded="false" aria-controls="collapseExample">
+        Sit Up
+    </button>
+</p>
+<div class="collapse" id="sitUp">
+    <img src="../static/img/sit-up.png" alt="Push-up QR Code">
+    <a href="https://go.echoar.xyz/inqM">Or click here!</a>
+</div>
+{% endblock %}

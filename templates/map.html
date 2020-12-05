@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Nearest Hospital Map{% endblock %}
+
+{% block content %}
+<body class="container">
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+<link
+        rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+        type="text/css"
+/>
+<br><br>
+<a class="btn btn-primary" href="/">Back</a>
+<br><br>
+<div id='map' style='width: 100%; height: 50em;'></div>
+<script type="text/javascript">
+    mapboxgl.accessToken = 'pk.eyJ1IjoiamhsZWU0MDg0IiwiYSI6ImNrZDJyOWo5OTBsYmYyd255c2plMHVxNWEifQ.s6h4fZHiLCpRM-sHNODusg';
+    var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    center: [103.819839, 1.352083], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+    });
+
+    // yeah sorry, it's kinda hardcoded now, would take more time to make it fully work
+    map.on('load', function() {
+      var directions = new MapboxDirections({
+        accessToken: mapboxgl.accessToken
+      });
+      map.addControl(directions, 'top-left');
+
+      directions.setOrigin('Sembewang');
+      directions.setDestination('Khoo Teck Phuat Hospital');
+    });
+</script>
+</body>
+{% endblock %}
