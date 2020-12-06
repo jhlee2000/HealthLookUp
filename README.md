@@ -1,4 +1,6 @@
-# Won Best Health & Well-Being Hack
+# Won Best Health & Well-Being Hack  
+Thank you judges for choosing this as the best hack for the category. I appreciate it alot! Cheers!
+
 # HealthLookUp
 This was project was made in a day for the HackWise 2020 Hackathon  
 Visit them here:  
